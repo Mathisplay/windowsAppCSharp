@@ -37,5 +37,13 @@ namespace ZaliczenieLib
             }
             return mem;
         }
+        public void Stop()
+        {
+            ServiceController service = new ServiceController("ProjektZaliczeniowy");
+            if (service.Status.Equals(ServiceControllerStatus.Running))
+            {
+                service.Stop();
+            }
+        }
     }
 }

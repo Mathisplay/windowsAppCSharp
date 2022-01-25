@@ -13,16 +13,29 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZaliczenieLib;
+using System.Threading;
+using System.ComponentModel;
 
 namespace AppWindow
 {
     public partial class MainWindow : Window
     {
+        private Thread t;
+        private MeasurementTool m;
         public MainWindow()
         {
             InitializeComponent();
-            MeasurementTool m = new MeasurementTool();
-            while(true)
+            m = new MeasurementTool();
+            t = new Thread(new ThreadStart(Refresh));
+        }
+        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            m.Stop();
+            t.Join();
+        }
+        private void Refresh()
+        {
+            while (true)
             {
                 label.Content = m.GetMem().ToString();
             }

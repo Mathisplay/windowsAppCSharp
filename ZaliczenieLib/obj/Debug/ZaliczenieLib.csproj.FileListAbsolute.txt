@@ -3,3 +3,4 @@ D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\bin\Debug\ZaliczenieLi
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Debug\ZaliczenieLib.csproj.CoreCompileInputs.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Debug\ZaliczenieLib.dll
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Debug\ZaliczenieLib.pdb
+D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Debug\ZaliczenieLib.csproj.AssemblyReference.cache
