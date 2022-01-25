@@ -22,11 +22,13 @@ namespace AppWindow
     {
         private DispatcherTimer t;
         private MeasurementTool m;
+        private long startMem;
         public MainWindow()
         {
             InitializeComponent();
             m = new MeasurementTool();
             t = new DispatcherTimer();
+            startMem = m.GetMem();
             t.Interval = TimeSpan.FromSeconds(0.1);
             t.Tick += Refresh;
             t.Start();
@@ -38,7 +40,8 @@ namespace AppWindow
         }
         private void Refresh(object sender, EventArgs e)
         {
-            label.Content = m.GetMem().ToString();
+            label.Content = Math.Round(m.BytesToGigabytes(m.GetMem()), 3).ToString() + "GB";
+            label4.Content = Math.Round(m.BytesToKilobytes(startMem - m.GetMem()), 3).ToString() + "kB";
         }
     }
 }

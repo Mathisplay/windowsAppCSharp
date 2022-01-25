@@ -45,5 +45,17 @@ namespace ZaliczenieLib
                 service.Stop();
             }
         }
+        public double BytesToKilobytes(double memory)
+        {
+            return memory / 8.0;
+        }
+        public double BytesToMegabytes(double memory)
+        {
+            return BytesToKilobytes(memory) / 1024.0;
+        }
+        public double BytesToGigabytes(double memory)
+        {
+            return BytesToMegabytes(memory) / 1024.0;
+        }
     }
 }
