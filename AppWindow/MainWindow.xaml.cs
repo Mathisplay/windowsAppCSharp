@@ -22,7 +22,10 @@ namespace AppWindow
         {
             InitializeComponent();
             MeasurementTool m = new MeasurementTool();
-            label.Content = m.GetMem().ToString();
+            while(true)
+            {
+                label.Content = m.GetMem().ToString();
+            }
         }
     }
 }

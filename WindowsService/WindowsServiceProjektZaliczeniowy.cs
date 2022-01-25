@@ -14,41 +14,38 @@ namespace WindowsService
 {
     public partial class Service1 : ServiceBase
     {
-        private Thread t;
+        private Timer t;
         private long memNow;
-        EventLog log;
-        DriveInfo drive;
+        private EventLog log;
+        private DriveInfo drive;
+        private AutoResetEvent autoEvent;
         public Service1()
         {
-            memNow = 0;
+            memNow = -1;
             log = new EventLog("MemProjLog");
             log.Source = "Service";
+            autoEvent = new AutoResetEvent(true);
             InitializeComponent();
         }
 
-        void CheckMem()
+        void CheckMem(Object stateInfo)
         {
             drive = new DriveInfo("C");
             if (drive.IsReady)
             {
                 memNow = drive.AvailableFreeSpace;
-            }
-            else
-            {
-                memNow = -1;
+                log.WriteEntry(memNow.ToString(), EventLogEntryType.Information);
             }
         }
 
         protected override void OnStart(string[] args)
         {
-            t = new Thread(new ThreadStart(CheckMem));
-            t.Start();
+            t = new Timer(CheckMem, autoEvent, 0, 5000);
         }
 
         protected override void OnStop()
         {
-            t.Join();
-            log.WriteEntry(memNow.ToString(), EventLogEntryType.Information);
+            t.Dispose();
         }
     }
 }

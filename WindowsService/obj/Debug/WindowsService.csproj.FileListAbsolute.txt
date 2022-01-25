@@ -6,3 +6,4 @@ D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Debug\WindowsServ
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Debug\WindowsService.csproj.CoreCompileInputs.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Debug\WindowsServiceProjektZaliczeniowy.exe
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Debug\WindowsServiceProjektZaliczeniowy.pdb
+D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Debug\WindowsService.csproj.AssemblyReference.cache

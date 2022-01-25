@@ -25,7 +25,7 @@ namespace ZaliczenieLib
             EventLog log = new EventLog();
             log.Log = "MemProjLog";
             EventLogEntryCollection e;
-            while(true)
+            if(EventLog.Exists("MemProjLog"))
             {
                 e = log.Entries;
                 if(e.Count != 0)
@@ -33,9 +33,9 @@ namespace ZaliczenieLib
                     mem = Convert.ToInt64(e[e.Count - 1].Message);
                     log.Source = "Service";
                     log.Clear();
-                    return mem;
                 }
             }
+            return mem;
         }
     }
 }
