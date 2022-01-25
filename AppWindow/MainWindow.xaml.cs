@@ -13,32 +13,32 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZaliczenieLib;
-using System.Threading;
+using System.Windows.Threading;
 using System.ComponentModel;
 
 namespace AppWindow
 {
     public partial class MainWindow : Window
     {
-        private Thread t;
+        private DispatcherTimer t;
         private MeasurementTool m;
         public MainWindow()
         {
             InitializeComponent();
             m = new MeasurementTool();
-            t = new Thread(new ThreadStart(Refresh));
+            t = new DispatcherTimer();
+            t.Interval = TimeSpan.FromSeconds(0.1);
+            t.Tick += Refresh;
+            t.Start();
         }
-        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        private void MainWindow_Closed(object sender, EventArgs e)
         {
             m.Stop();
-            t.Join();
+            t.Stop();
         }
-        private void Refresh()
+        private void Refresh(object sender, EventArgs e)
         {
-            while (true)
-            {
-                label.Content = m.GetMem().ToString();
-            }
+            label.Content = m.GetMem().ToString();
         }
     }
 }
