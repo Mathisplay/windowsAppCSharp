@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Configuration;
+using System.Collections.Specialized;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +36,7 @@ namespace AppWindow
             m.Start();
             #endif
             t.Start();
+            LoadMessages();
         }
         private void MainWindow_Closed(object sender, EventArgs e)
         {
@@ -48,6 +51,13 @@ namespace AppWindow
             }
             label.Content = Math.Round(m.BytesToGigabytes(m.GetMem()), 3).ToString() + "GB";
             label4.Content = Math.Round(m.BytesToMegabytes(startMem - m.GetMem()), 3).ToString() + "MB";
+        }
+        public void LoadMessages()
+        {
+            NameValueCollection AllAppSettings = ConfigurationManager.AppSettings;
+            motdlabel.Content = AllAppSettings.Get("MOTD");
+            configtext1.Content = AllAppSettings.Get("Text1");
+            configtext2.Content = AllAppSettings.Get("Text2");
         }
     }
 }

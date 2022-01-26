@@ -1,6 +1,5 @@
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\bin\Release\ZaliczenieLib.dll
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\bin\Release\ZaliczenieLib.pdb
-D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Release\ZaliczenieLib.csproj.AssemblyReference.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Release\ZaliczenieLib.csproj.CoreCompileInputs.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Release\ZaliczenieLib.dll
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\ZaliczenieLib\obj\Release\ZaliczenieLib.pdb
