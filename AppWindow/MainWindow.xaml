@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closed="MainWindow_Closed">
     <Grid>
+        <Canvas HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Background="PapayaWhip"/>
         <Label x:Name="label" Content="DATA HERE" HorizontalAlignment="Left" Margin="415,36,0,0" VerticalAlignment="Top" Height="72" Width="367" FontFamily="Akashi" FontSize="48"/>
         <Label x:Name="label2" Content="C:\ Free Space:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="72" Width="400" FontFamily="Akashi" FontSize="48"/>
         <Label x:Name="label3" Content="Memory Delta:" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Height="72" Width="400" FontFamily="Akashi" FontSize="48"/>
         <Label x:Name="label4" Content="DATA HERE" HorizontalAlignment="Left" Margin="415,113,0,0" VerticalAlignment="Top" Height="72" Width="367" FontFamily="Akashi" FontSize="48"/>
-
     </Grid>
 </Window>

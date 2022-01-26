@@ -1,7 +1,6 @@
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\bin\Release\WindowsServiceProjektZaliczeniowy.exe.config
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\bin\Release\WindowsServiceProjektZaliczeniowy.exe
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\bin\Release\WindowsServiceProjektZaliczeniowy.pdb
-D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Release\WindowsService.csproj.AssemblyReference.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Release\WindowsServiceProjektZaliczeniowy.ProjectInstaller.resources
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Release\WindowsService.csproj.GenerateResource.cache
 D:\Projekt zaliczeniowy\ProjektZaliczeniowy\WindowsService\obj\Release\WindowsService.csproj.CoreCompileInputs.cache

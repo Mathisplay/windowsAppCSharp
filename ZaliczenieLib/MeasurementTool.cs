@@ -13,15 +13,18 @@ namespace ZaliczenieLib
         private long mem;
         public MeasurementTool()
         {
-            mem = 0;
+            mem = -1;
         }
-        public long GetMem()
+        public void Start()
         {
             ServiceController service = new ServiceController("ProjektZaliczeniowy");
             if (service.Status.Equals(ServiceControllerStatus.Stopped) || service.Status.Equals(ServiceControllerStatus.StopPending))
             {
                 service.Start();
             }
+        }
+        public long GetMem()
+        {
             EventLog log = new EventLog();
             log.Log = "MemProjLog";
             EventLogEntryCollection e;
@@ -47,7 +50,7 @@ namespace ZaliczenieLib
         }
         public double BytesToKilobytes(double memory)
         {
-            return memory / 8.0;
+            return memory / 1024.0;
         }
         public double BytesToMegabytes(double memory)
         {

@@ -28,7 +28,7 @@ namespace WindowsService
             InitializeComponent();
         }
 
-        private void CheckMem(Object stateInfo)
+        public void CheckMem(Object stateInfo)
         {
             drive = new DriveInfo("C");
             if (drive.IsReady)
