@@ -15,6 +15,7 @@ namespace WindowsService
     public partial class Service1 : ServiceBase
     {
         private Timer t;
+        //private Thread t;
         private long memNow;
         private EventLog log;
         private DriveInfo drive;
@@ -36,16 +37,19 @@ namespace WindowsService
                 memNow = drive.AvailableFreeSpace;
                 log.WriteEntry(memNow.ToString(), EventLogEntryType.Information);
             }
+            //Thread.Sleep(5000);
         }
 
         protected override void OnStart(string[] args)
         {
             t = new Timer(CheckMem, autoEvent, 0, 5000);
+            //t = new Thread(new ThreadStart(CheckMem));
         }
 
         protected override void OnStop()
         {
             t.Dispose();
+            //t.join()
         }
     }
 }
